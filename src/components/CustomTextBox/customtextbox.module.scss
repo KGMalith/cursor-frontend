@@ -1,0 +1,75 @@
+.defaultLabel {
+  font-size: var(--app-regular-font-size);
+  font-weight: var(--app-semi-bold-font-weight);
+  color: var(--app-secondary-font-color);
+}
+
+.requiredIcon {
+  color: #ea5c5c;
+  font-size: var(--app-regular-font-size);
+  margin-right: 0.3rem;
+}
+
+.paddingTextBox {
+  font-weight: var(--app-semi-bold-font-weight) !important  ;
+  font-size: var(--app-regular-font-size) !important;
+  color: var(--app-tertiary-font-color) !important;
+  min-height: 39px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 2.5rem !important;
+  &:focus {
+    border: 1px solid #3d56b2 !important;
+    box-shadow: none !important;
+  }
+}
+
+.paddingTextBox:focus ~ .frontIconContainer svg {
+  stroke-width: 2 !important;
+  stroke: #3d56b2 !important;
+}
+
+.defaultTextBox {
+  font-weight: var(--app-semi-bold-font-weight) !important  ;
+  font-size: var(--app-regular-font-size) !important;
+  color: var(--app-tertiary-font-color) !important;
+  min-height: 39px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  &:focus {
+    border: 1px solid #3d56b2 !important;
+    box-shadow: none !important;
+  }
+}
+
+.frontIconContainer svg {
+  position: absolute;
+  margin-top: -1.8rem;
+  margin-left: 0.8rem;
+}
+
+.errorMsg {
+  font-size: var(--app-small-font-size);
+  color: #ea5c5c;
+}
+
+.minLabel {
+  font-size: var(--app-small-font-size);
+  font-weight: var(--app-regular-weight);
+  color: var(--app-light-font-color);
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .defaultLabel {
+    font-size: var(--app-small-font-size);
+  }
+  .paddingTextBox {
+    font-size: var(--app-small-font-size) !important;
+  }
+  .defaultTextBox {
+    font-size: var(--app-small-font-size) !important;
+  }
+}

@@ -1,0 +1,160 @@
+.primaryBtn {
+  font-weight: var(--app-bold-font-weight) !important;
+  font-size: var(--app-regular-font-size) !important;
+  color: var(--app-buttons-font-color) !important;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.32);
+  border-radius: 8px !important;
+  min-height: 42px;
+  background: var(--app-buttons-secondary-body-color) !important;
+  border: none !important;
+  &:hover {
+    background: var(--app-buttons-secondary-body-hover-color) !important;
+  }
+}
+
+.secondaryBtn {
+  font-weight: var(--app-bold-font-weight) !important;
+  font-size: var(--app-regular-font-size) !important;
+  color: var(--app-buttons-font-color) !important;
+  border-radius: 8px !important;
+  min-height: 37px;
+  background: var(--app-buttons-default-body-color) !important;
+  border: none !important;
+  width: 100%;
+  &:hover {
+    background: var(--app-buttons-default-body-hover-color) !important;
+  }
+}
+
+.defaultBtn {
+  font-weight: var(--app-bold-font-weight) !important;
+  font-size: var(--app-regular-font-size) !important;
+  color: var(--app-buttons-font-color) !important;
+  border-radius: 8px !important;
+  min-height: 42px;
+  background: var(--app-buttons-default-body-color) !important;
+  border: none !important;
+  &:hover {
+    background: var(--app-buttons-default-body-hover-color) !important;
+  }
+}
+
+.modalBlueBtn {
+  font-weight: var(--app-semi-bold-font-weight) !important;
+  font-size: var(--app-regular-secondary-font-size) !important;
+  color: var(--app-buttons-font-color) !important;
+  border-radius: 8px !important;
+  min-height: 42px;
+  width: 100%;
+  background: var(--app-buttons-secondary-body-color) !important;
+  border: none !important;
+  &:hover {
+    background: var(--app-buttons-secondary-body-hover-color) !important;
+  }
+}
+
+.modalRedBtn {
+  font-weight: var(--app-semi-bold-font-weight) !important;
+  font-size: var(--app-regular-secondary-font-size) !important;
+  color: var(--app-buttons-font-color) !important;
+  border-radius: 8px !important;
+  min-height: 42px;
+  width: 100%;
+  background: var(--app-buttons-danger-body-color) !important;
+  border: none !important;
+  &:hover {
+    background: var(--app-buttons-danger-body-hover-color) !important;
+  }
+}
+
+.modalGreenBtn {
+  font-weight: var(--app-semi-bold-font-weight) !important;
+  font-size: var(--app-regular-secondary-font-size) !important;
+  color: var(--app-buttons-font-color) !important;
+  border-radius: 8px !important;
+  min-height: 42px;
+  width: 100%;
+  background: var(--app-buttons-success-body-color) !important;
+  border: none !important;
+  &:hover {
+    background: var(--app-buttons-success-body-hover-color) !important;
+  }
+}
+
+.addBtn {
+  font-size: var(--app-small-font-size) !important;
+  font-weight: var(--app-semi-bold-font-weight) !important;
+  color: var(--app-buttons-default-body-color) !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.cancelBtn {
+  font-size: var(--app-regular-font-size) !important;
+  font-weight: var(--app-medium-weight) !important;
+  color: var(--app-primary-font-color) !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-height: 42px;
+}
+
+.connectBtn {
+  font-weight: var(--app-bold-font-weight) !important;
+  font-size: var(--app-small-font-size) !important;
+  color: var(--app-buttons-font-color) !important;
+  border-radius: 8px !important;
+  min-height: 28px;
+  background: var(--app-buttons-default-body-color) !important;
+  line-height: 1 !important;
+  border: none !important;
+  &:hover {
+    background: var(--app-buttons-default-body-hover-color) !important;
+  }
+}
+
+.disconnectBtn {
+  font-weight: var(--app-bold-font-weight) !important;
+  font-size: var(--app-small-font-size) !important;
+  color: var(--app-buttons-font-color) !important;
+  border-radius: 8px !important;
+  min-height: 28px;
+  background: var(--app-buttons-danger-body-color) !important;
+  border: none !important;
+  line-height: 1 !important;
+  &:hover {
+    background: var(--app-buttons-danger-body-hover-color) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .primaryBtn {
+    font-size: var(--app-small-font-size) !important;
+    min-height: 32px;
+  }
+  .secondaryBtn {
+    font-size: var(--app-small-font-size) !important;
+    min-height: 27px;
+  }
+  .defaultBtn {
+    font-size: var(--app-small-font-size) !important;
+    min-height: 32px;
+  }
+  .modalBlueBtn {
+    font-size: var(--app-regular-font-size) !important;
+    min-height: 32px;
+  }
+  .modalRedBtn {
+    font-size: var(--app-regular-font-size) !important;
+    min-height: 32px;
+  }
+  .modalGreenBtn {
+    font-size: var(--app-regular-font-size) !important;
+    min-height: 32px;
+  }
+  .cancelBtn {
+    font-size: var(--app-small-font-size) !important;
+    min-height: 32px;
+  }
+}

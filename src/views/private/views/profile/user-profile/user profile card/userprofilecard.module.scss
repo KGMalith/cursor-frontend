@@ -1,0 +1,93 @@
+.cardHeader {
+  background: transparent !important;
+  padding: 1rem;
+}
+
+.cardTopic {
+  font-size: var(--app-regular-secondary-font-size) !important;
+  font-weight: var(--app-semi-bold-font-weight) !important;
+  color: var(--app-primary-font-color) !important;
+  margin-bottom: 0px !important;
+}
+
+.cardHorizontalLine {
+  background: #c4c4c4 !important;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.ProgressBar {
+  height: 10px;
+}
+
+.imageUploadContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.avatarContainer {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.imageuploadBox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.uploadBtn {
+  font-weight: var(--app-bold-font-weight) !important;
+  font-size: var(--app-small-font-size) !important;
+  color: var(--app-buttons-font-color) !important;
+  border-radius: 8px !important;
+  min-height: 31px;
+  background: var(--app-buttons-default-body-color) !important;
+  border: none !important;
+  &:hover {
+    background: var(--app-buttons-default-body-hover-color) !important;
+  }
+}
+
+.modalTitle {
+  font-weight: var(--app-semi-bold-font-weight) !important;
+  font-size: var(--app-sub-title-primary-font-size) !important;
+  color: #4f4f4f !important;
+}
+
+.modalCancelBtn {
+  border-radius: 6px;
+  background: rgba(61, 86, 178, 0.1) !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.175rem 0.375rem !important;
+  line-height: 1;
+  &:hover {
+    background: rgba(61, 86, 178, 0.3) !important;
+  }
+  &:focus {
+    background: rgba(61, 86, 178, 0.3) !important;
+  }
+  &:active {
+    background: rgba(61, 86, 178, 0.3) !important;
+  }
+  svg {
+    margin-top: -5px;
+  }
+}
+

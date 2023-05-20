@@ -1,0 +1,58 @@
+.successAlert {
+  border-left: 4px solid #27ae60 !important;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25) !important;
+  background: #fff !important;
+  color: #333 !important;
+  padding: 0.5rem 1rem !important;
+  margin-top: 10px;
+  font-size: var(--app-small-font-size);
+}
+
+.errorAlert {
+  border-left: 4px solid #eb5757 !important;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25) !important;
+  background: #fff !important;
+  color: #333 !important;
+  padding: 0.5rem 1rem !important;
+  margin-top: 10px;
+  font-size: var(--app-small-font-size);
+}
+
+.deleteIcon {
+  cursor: pointer;
+  text-align: right;
+}
+
+.errorNotificationAlert {
+  background: rgba(247, 45, 95, 0.7) !important;
+  border-radius: 4px !important;
+  color: var(--app-primary-highlight-font-color) !important;
+  border: none !important;
+}
+
+.warningNotificationAlert {
+  background: rgba(249, 192, 81, 0.7) !important;
+  border-radius: 4px !important;
+  color: var( --app-secondary-font-color) !important;
+  border: none !important;
+}
+
+.alertNotificationLabel {
+  font-weight: var(--app-semi-bold-font-weight);
+  font-size: var(--app-regular-secondary-font-size);
+  margin-bottom: 0px;
+  margin-right: 1rem;
+}
+
+.alertNotificationMessage {
+  font-weight: var(--app-medium-weight);
+  font-size: var(--app-regular-font-size);
+  margin-bottom: 0px;
+}
+
+.textContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}

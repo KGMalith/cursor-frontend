@@ -1,0 +1,13 @@
+.headerwrapper {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.appBody {
+  background: var(--app-quaternary-color);
+  min-height: calc(100vh - 72px);
+}

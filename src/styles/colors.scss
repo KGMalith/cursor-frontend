@@ -1,0 +1,40 @@
+:root {
+  //==================Main Colors=================
+
+  --app-primary-color: #14279b;
+  --app-secondary-color: #3d56b2;
+  --app-tertiary-color: #5c7aea;
+  --app-quaternary-color: #e6e6e6;
+
+  //==================Font Colors==================
+
+  --app-primary-font-color: #3f4249;
+  --app-secondary-font-color: #333333;
+  --app-tertiary-font-color: #636d77;
+  --app-light-font-color: #84888f;
+  --app-primary-highlight-font-color: #ffffff;
+  --app-secondary-highlight-font-color: #3d56b2;
+  --app-buttons-font-color: #ffffff;
+  --app-badge-success-text-color: #27ae60;
+  --app-badge-warning-text-color: #d2a20e;
+  --app-badge-secondary-text-color: #84888f;
+  --app-badge-danger-text-color: #eb5757;
+
+  //========================Buttons Colors=======================
+
+  --app-buttons-default-body-color: #3d56b2;
+  --app-buttons-default-body-hover-color: #233fa7;
+  --app-buttons-secondary-body-color: #5c7aea;
+  --app-buttons-secondary-body-hover-color: #375be0;
+  --app-buttons-success-body-color: #2eae65;
+  --app-buttons-success-body-hover-color: #1e9752;
+  --app-buttons-danger-body-color: #ea5c5c;
+  --app-buttons-danger-body-hover-color: #e24e4e;
+
+  //========================Badges Colors=======================
+
+  --app-badge-success-body-color: rgba(39, 174, 96, 0.15);
+  --app-badge-warning-body-color: rgba(242, 201, 76, 0.15);
+  --app-badge-secondary-body-color: rgba(224, 224, 224, 0.85);
+  --app-badge-danger-body-color: rgba(234, 92, 92, 0.15);
+}

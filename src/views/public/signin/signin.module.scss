@@ -1,0 +1,64 @@
+.header {
+  height: 90px;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+}
+
+.header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 60px;
+}
+
+.headerQuestion {
+  font-size: var(--app-regular-font-size);
+  font-weight: var(--app-regular-weight);
+  color: var(--app-secondary-font-color);
+  margin-right: 1.5rem;
+}
+
+.signinImageMessage {
+  font-size: var(--app-regular-font-size);
+  font-weight: var(--app-regular-weight);
+  color: var(--app-secondary-font-color);
+  text-align: center;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: var(--app-sub-title-secondary-font-size);
+  font-weight: var(--app-bold-font-weight);
+  color: var(--app-secondary-font-color);
+  margin-bottom: 2rem;
+}
+
+.signinPageMessage {
+  font-weight: var(--app-regular-weight);
+  font-size: var(--app-regular-font-size);
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--app-tertiary-font-color);
+  a {
+    color: var(--app-tertiary-font-color) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .logo img {
+    max-height: 30px;
+  }
+  .headerQuestion {
+    font-size: var(--app-small-font-size);
+  }
+  .signinImageMessage {
+    font-size: var(--app-small-font-size);
+  }
+  .signinPageMessage {
+    font-size: var(--app-small-font-size);
+  }
+  .pageTitle {
+    font-size: 18px;
+  }
+}

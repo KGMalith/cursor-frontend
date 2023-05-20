@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/poppins-extralight-webfont.woff2') format('woff2'),
+         url('../assets/fonts/poppins-extralight-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/poppins-thin-webfont.woff2') format('woff2'),
+         url('../assets/fonts/poppins-thin-webfont.woff') format('woff');
+    font-weight: 250;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/poppins-light-webfont.woff2') format('woff2'),
+         url('../assets/fonts/poppins-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/poppins-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/poppins-medium-webfont.woff2') format('woff2'),
+         url('../assets/fonts/poppins-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/poppins-semibold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/poppins-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/poppins-bold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/poppins-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/poppins-extrabold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/poppins-extrabold-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/poppins-black-webfont.woff2') format('woff2'),
+         url('../assets/fonts/poppins-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+:root{
+   
+   
+    --app-primary-font:'poppins';
+
+
+    //Fonts Weights
+    --app-extra-light-font-weight:200;
+    --app-thin-font-weight:250;
+    --app-light-font-weight:300;
+    --app-regular-weight:400;
+    --app-medium-weight:500;
+    --app-semi-bold-font-weight:600;
+    --app-bold-font-weight:700;
+    --app-extra-bold-font-weight:800;
+    --app-black-font-weight:900;
+
+    //Fonts Sizes Desktop
+    --app-extra-small-font-size:10px;
+    --app-small-font-size:12px;
+    --app-regular-font-size:14px;
+    --app-regular-secondary-font-size:16px;
+    --app-sub-title-primary-font-size:20px;
+    --app-sub-title-secondary-font-size:25px;
+
+    
+}

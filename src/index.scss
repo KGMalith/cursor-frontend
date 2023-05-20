@@ -1,0 +1,7 @@
+@import "styles/fonts.scss";
+@import "styles/colors.scss";
+@import "~bootstrap/scss/bootstrap";
+
+* , body {
+  font-family: var(--app-primary-font) !important;
+}
