@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import styles from './signup.module.scss';
 import { Lock, Mail, User } from 'react-feather';
 import { Col, Container, Form, Image } from 'react-bootstrap';
@@ -9,15 +9,18 @@ import * as yup from 'yup';
 import { Formik } from 'formik';
 import { signUp } from '../../../services/utils/auth';
 import { SignUpParameters } from '../../../services/interfaces';
+import { useNavigate } from 'react-router-dom';
 const {Helmet} = require('react-helmet');
 
 
-function Signup(props:any) {
+function Signup() {
     const [isLoading, setLoading] = useState(false);
+    let navigate = useNavigate();
+    const signupFormRef = useRef<any>();
 
     const schema = yup.object({
-        firstName: yup.string().required('Required'),
-        lastName: yup.string().required('Required'),
+        first_name: yup.string().required('Required'),
+        last_name: yup.string().required('Required'),
         email: yup.string().email('Invalid email').required('Required'),
         password: yup.string().required('Required')
     });
@@ -27,7 +30,8 @@ function Signup(props:any) {
         const respond:any = await signUp(values, setLoading);
         if (respond && respond.success){
             setLoading(false);
-            props.history.push('/');
+            signupFormRef.current?.resetForm();
+            navigate('/');
         }
     }
 
@@ -60,11 +64,12 @@ function Signup(props:any) {
                             <Col lg={{ span: 8, offset: 2 }}>
                                 <p className={styles.pageTitle}>Signup</p>
                                 <Formik
+                                    innerRef={signupFormRef}
                                     validationSchema={schema}
                                     onSubmit={(values) => onSubmit(values)}
                                     initialValues={{
-                                        firstName:'',
-                                        lastName:'',
+                                        first_name:'',
+                                        last_name:'',
                                         email:'',
                                         password:'',
                                     }}>
@@ -77,13 +82,13 @@ function Signup(props:any) {
                                         <Form noValidate onSubmit={handleSubmit}>
                                             <div className='mt-2'>
                                                 <CommonTextBox
-                                                    controlId="firstName"
+                                                    controlId="first_name"
                                                     label="First Name"
                                                     type="text"
-                                                    name="firstName"
+                                                    name="first_name"
                                                     handleOnChange={handleChange}
-                                                    errorMessage={submitCount > 0 && errors.firstName}
-                                                    isInvalid={submitCount > 0 && errors.firstName}
+                                                    errorMessage={submitCount > 0 && errors.first_name}
+                                                    isInvalid={submitCount > 0 && errors.first_name}
                                                     frontIcon={
                                                         <User strokeWidth={1} width={18} height={18} color='#C4C4C4' />
                                                     }
@@ -91,13 +96,13 @@ function Signup(props:any) {
                                             </div>
                                             <div className='mt-2'>
                                                 <CommonTextBox
-                                                    controlId="lastName"
+                                                    controlId="last_name"
                                                     label="Last Name"
                                                     type="text"
-                                                    name="lastName"
+                                                    name="last_name"
                                                     handleOnChange={handleChange}
-                                                    errorMessage={submitCount > 0 && errors.lastName}
-                                                    isInvalid={submitCount > 0 && errors.lastName}
+                                                    errorMessage={submitCount > 0 && errors.last_name}
+                                                    isInvalid={submitCount > 0 && errors.last_name}
                                                     frontIcon={
                                                         <User strokeWidth={1} width={18} height={18} color='#C4C4C4' />
                                                     }

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import styles from './userpasswordcard.module.scss';
 import { Card, Col, Container, Form } from 'react-bootstrap';
 import { CustomButton } from '../../../../../../components/CustomButtons';
@@ -6,6 +6,7 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import { CommonTextBox } from '../../../../../../components/CustomTextBox';
 import { UpdatePasswordFormikParameters } from '../../../../../../services/interfaces';
+import { updatePassword } from '../../../../../../services/utils/auth';
 
 function UserPassword() {
   const [isFormSubmissionLoading, setFormSubmissionLoading] = useState(false);
@@ -14,13 +15,14 @@ function UserPassword() {
     current_password: yup.string().required('Required'),
     new_password: yup.string().required('Required'),
     confirm_password: yup.string()
-      .oneOf([yup.ref('new_password'), ''], 'New Password and Confirm Password must match').nullable()
+      .required('Required')
+      .oneOf([yup.ref('new_password')], 'New Password and Confirm Password must match').nullable()
   });
 
   //submit value
-  const onSubmit = async (values:UpdatePasswordFormikParameters) => {
+  const onSubmit = async (values: UpdatePasswordFormikParameters) => {
     setFormSubmissionLoading(true);
-    // await updatePassword(values);
+    await updatePassword(values);
     setFormSubmissionLoading(false);
   }
 
@@ -36,9 +38,9 @@ function UserPassword() {
           validationSchema={schema}
           onSubmit={(values) => onSubmit(values)}
           initialValues={{
-            current_password:'',
-            new_password:'',
-            confirm_password:''
+            current_password: '',
+            new_password: '',
+            confirm_password: ''
           }}>
           {({
             errors,

@@ -14,9 +14,11 @@ export const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(async (request:any) => {
   let token = await getAccessToken();
-  request.headers = {
-    Authorization: `${token}`,
-  };
+  if(token){
+    request.headers = {
+      Authorization: `${token}`,
+    };
+  }
   return request;
 });
 

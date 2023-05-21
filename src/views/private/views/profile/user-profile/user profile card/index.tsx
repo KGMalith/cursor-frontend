@@ -96,7 +96,7 @@ function UserProfile(props:any) {
         <Formik
           validationSchema={schema}
           onSubmit={(values) => onSubmit(values)}
-          initialValues={{ email: props?.profileValues?.user_email, first_name: props?.profileValues?.user_first_name, last_name: props?.profileValues?.user_last_name }}>
+          initialValues={{ email: props?.profileValues?.email, first_name: props?.profileValues?.first_name, last_name: props?.profileValues?.last_name }}>
           {({
             errors,
             handleChange,
@@ -109,7 +109,7 @@ function UserProfile(props:any) {
                 <Container>
                   <div className={styles.imageUploadContainer}>
                     <div className={styles.avatarContainer}>
-                      <img src={props?.profileValues?.user_image ? props?.profileValues?.user_image : '/images/dummy-avatar.png'} className={styles.avatar} alt="avatar" />
+                      <img src={props?.profileValues?.image ? props?.profileValues?.image : '/images/dummy-avatar.png'} className={styles.avatar} alt="avatar" />
                     </div>
                     <div className={styles.imageuploadBox}>
                       <button className={`${styles.uploadBtn} btn btn-primary`} type="button" onClick={() => setShowModal(true)}>
@@ -175,13 +175,13 @@ function UserProfile(props:any) {
       </Card>
 
       {/* Image upload modal */}
-      <Modal show={showModal} onHide={() => setShowModal(false)} backdrop="static" keyboard={false} centered size="sm">
+      <Modal show={showModal} onHide={() => setShowModal(false)} backdrop="static" keyboard={false} centered size="lg">
         <Modal.Header>
           <Container>
             <Modal.Title className={styles.modalTitle}>Upload Image</Modal.Title>
           </Container>
           <Button className={styles.modalCancelBtn} onClick={() => setShowModal(false)}>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path d="M13.5 4.5L4.5 13.5" stroke="#3D56B2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M4.5 4.5L13.5 13.5" stroke="#3D56B2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

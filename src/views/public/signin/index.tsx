@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useRef} from 'react';
 import styles from './signin.module.scss';
 import { Lock, Mail } from 'react-feather';
 import { Col, Container, Form, Image } from 'react-bootstrap';
@@ -8,6 +8,9 @@ import { CommonTextBox } from '../../../components/CustomTextBox';
 import * as yup from 'yup';
 import { Formik } from 'formik';
 import { signIn } from '../../../services/utils/auth';
+import { useNavigate } from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+import {setEmailAction,setImageAction,setUserFirstNameAction,setUserLastNameAction} from '../../../redux/userSlice';
 const {Helmet} = require('react-helmet');
 
 interface SubmitValue {
@@ -15,8 +18,11 @@ interface SubmitValue {
     password:string;
 }
 
-function Signin(props:any) {
+function Signin() {
     const [isLoading, setLoading] = useState(false);
+    let navigate = useNavigate();
+    let dispatch = useDispatch();
+    const signinFormRef = useRef<any>();
 
     const schema = yup.object({
         email: yup.string().email('Invalid email').required('Required'),
@@ -27,7 +33,13 @@ function Signin(props:any) {
         setLoading(true);
         const respond:any = await signIn(values, setLoading);
         if (respond && respond.success) {
-            props.history.push('/app');
+            console.log(respond)
+            dispatch(setEmailAction(respond.data.email));
+            dispatch(setImageAction(respond.data.image));
+            dispatch(setUserFirstNameAction(respond.data.first_name));
+            dispatch(setUserLastNameAction(respond.data.last_name));
+            signinFormRef.current?.resetForm();
+            navigate('/app');
         }
     }
 
@@ -60,6 +72,7 @@ function Signin(props:any) {
                             <Col lg={{ span: 8, offset: 2 }}>
                                 <p className={styles.pageTitle}>Sign In</p>
                                 <Formik
+                                    innerRef={signinFormRef}
                                     validationSchema={schema}
                                     onSubmit={(values:SubmitValue) => onSubmit(values)}
                                     initialValues={{
